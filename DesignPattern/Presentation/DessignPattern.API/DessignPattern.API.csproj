@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\DessignPattern.Application\DessignPattern.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\DessignPattern.Infrastructure\DessignPattern.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using DessignPattern.Application.Services;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DessignPattern.Infrastructure.Services
 {
-    public class ConfigurationServices
+    public class ConfigurationServices: IConfigurationService
     {
         private static ConfigurationServices instance;
 
