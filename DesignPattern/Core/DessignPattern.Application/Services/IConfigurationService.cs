@@ -8,6 +8,6 @@ namespace DessignPattern.Application.Services
 {
     public interface IConfigurationService
     {
-        
+        string GetValue(string key);
     }
 }

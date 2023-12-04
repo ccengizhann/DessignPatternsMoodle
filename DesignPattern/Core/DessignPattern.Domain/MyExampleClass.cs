@@ -10,5 +10,18 @@ namespace DessignPattern.Domain
     public class MyExampleClass
     {
         private readonly IConfigurationService _configurationService;
+
+        public MyExampleClass(IConfigurationService configurationService)
+        {
+            _configurationService = configurationService;
+            
+            var myConnectionString = _configurationService.GetValue("Seq:ServerURL");
+            
+            Console.WriteLine(myConnectionString);
+        }
     }
-}
+       
+ }
+
+    
+

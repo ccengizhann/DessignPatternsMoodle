@@ -1,4 +1,5 @@
-﻿using DessignPattern.Infrastructure.Services;
+﻿using DessignPattern.Application.Services;
+using DessignPattern.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,15 +9,18 @@ namespace DessignPattern.API.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        public CustomerController()
+        private readonly IConfigurationService _configurationService;
+
+        public CustomerController(IConfigurationService configurationService)
         {
-            
+            _configurationService = configurationService;
         }
 
         [HttpGet]
         public void Get(string name)
         {
-            ConfigurationServices.GetInstance().GetValue(name);
+            _configurationService.GetValue(name);
+
         }
 
     }

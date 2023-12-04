@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DessignPattern.Application\DessignPattern.Application.csproj" />
+  </ItemGroup>
+
 </Project>

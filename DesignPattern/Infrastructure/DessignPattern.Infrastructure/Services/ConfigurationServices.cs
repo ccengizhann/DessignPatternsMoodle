@@ -10,7 +10,7 @@ namespace DessignPattern.Infrastructure.Services
 {
     public class ConfigurationServices: IConfigurationService
     {
-        private static ConfigurationServices instance;
+        /*private static ConfigurationServices instance;
 
         public static ConfigurationServices GetInstance()
         {
@@ -19,7 +19,7 @@ namespace DessignPattern.Infrastructure.Services
                 instance = new ConfigurationServices();
             
             return instance;
-        }
+        }*/
 
         public string GetValue(string key)
         {
@@ -35,7 +35,7 @@ namespace DessignPattern.Infrastructure.Services
 
         }
 
-        ConfigurationServices() 
+        public ConfigurationServices() 
         {
             Console.WriteLine("Instance Created");
         }
